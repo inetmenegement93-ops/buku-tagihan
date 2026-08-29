@@ -359,8 +359,8 @@ function LoginScreen({ error }) {
     <div className="min-h-screen flex items-center justify-center p-6" style={{ background: CREAM }}>
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-20 h-20 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-sm overflow-hidden" style={{ background: NAVY }}>
-            <img src="/logo.png" alt="Logo" className="w-16 h-16 object-contain" />
+          <div className="rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-sm overflow-hidden px-5 py-4" style={{ background: NAVY, maxWidth: 260 }}>
+            <img src="/logo.png" alt="Logo" className="w-full h-auto object-contain" />
           </div>
           <h1 className="text-2xl font-bold" style={{ color: NAVY, fontFamily: "'Sora', sans-serif" }}>Buku Tagihan</h1>
           <p className="text-sm text-gray-500 mt-1">Masuk dengan akun resmi Anda</p>
@@ -674,7 +674,7 @@ function AdminView({ profile, customers, penagihList, onLogout }) {
           backgroundImage: "url(/logo-watermark.png)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center 40%",
-          backgroundSize: "min(80vw, 420px)",
+          backgroundSize: "min(85vw, 480px) auto",
           opacity: 0.06,
         }}
       />
@@ -682,11 +682,12 @@ function AdminView({ profile, customers, penagihList, onLogout }) {
         <img
           src="/logo-small.png"
           alt=""
-          className="pointer-events-none absolute -right-6 -top-8 w-36 h-36 object-contain opacity-15"
+          className="pointer-events-none absolute -right-4 -top-2 object-contain opacity-15"
+          style={{ height: 130, width: "auto" }}
         />
         <div className="flex items-center justify-between relative z-10">
           <div className="flex items-center gap-3">
-            <img src="/logo-small.png" alt="Logo" className="w-9 h-9 object-contain" />
+            <img src="/logo-small.png" alt="Logo" className="object-contain" style={{ height: 30, width: "auto" }} />
             <div>
               <div className="text-white/60 text-xs">Panel Admin · {profile.nama}</div>
               <div className="text-white font-bold text-lg" style={{ fontFamily: "'Sora', sans-serif" }}>Buku Tagihan</div>
@@ -1076,7 +1077,7 @@ function PenagihView({ profile, uid, customers, onLogout }) {
           backgroundImage: "url(/logo-watermark.png)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center 40%",
-          backgroundSize: "min(80vw, 420px)",
+          backgroundSize: "min(85vw, 480px) auto",
           opacity: 0.06,
         }}
       />
@@ -1084,11 +1085,12 @@ function PenagihView({ profile, uid, customers, onLogout }) {
         <img
           src="/logo-small.png"
           alt=""
-          className="pointer-events-none absolute -right-6 -top-8 w-36 h-36 object-contain opacity-15"
+          className="pointer-events-none absolute -right-4 -top-2 object-contain opacity-15"
+          style={{ height: 130, width: "auto" }}
         />
         <div className="flex items-center justify-between relative z-10">
           <div className="flex items-center gap-3">
-            <img src="/logo-small.png" alt="Logo" className="w-9 h-9 object-contain" />
+            <img src="/logo-small.png" alt="Logo" className="object-contain" style={{ height: 30, width: "auto" }} />
             <div><div className="text-white/60 text-xs">Buku Tagihan</div><div className="text-white font-bold text-lg" style={{ fontFamily: "'Sora', sans-serif" }}>{profile.nama}</div></div>
           </div>
           <button onClick={onLogout} className="text-white/70"><LogOut size={18} /></button>
